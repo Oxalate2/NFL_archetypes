@@ -1,4 +1,4 @@
-# NFL_archetypes
+# NFL_archetypes 🏈
 
 ## Project Overview
 
@@ -8,7 +8,7 @@ This project applies unsupervised learning techniques to analyze various perform
 
 ---
 
-## Key Features
+## Key Features 🔑
 
 - **Player Clustering**: Grouping NFL players based on their performance data using unsupervised machine learning techniques (e.g., K-Means, DBSCAN).
 - **Playstyle Archetypes**: Identifying common playstyles such as "Speedster", "Power Runner", "Elite Passer", etc.
@@ -32,7 +32,7 @@ git clone https://github.com/Oxalate2/NFL_archetypes.git
 cd NFL_archetypes
 ```
 
-## Data
+## Data 📊
 
 The project uses NFL player performance data (either pulled from publicly available datasets or APIs). For optimal results, the dataset should include a variety of performance metrics for players, including:
 
@@ -41,7 +41,7 @@ The project uses NFL player performance data (either pulled from publicly availa
 - **Advanced Metrics**: Speed, agility scores, yards per carry, passer rating, etc.
 - **Physical Traits**: Height, weight, age, position, etc.
 
-### Data Source:
+### Data Source
 - [Pro Football Reference](https://www.pro-football-reference.com/)
 
 ---
