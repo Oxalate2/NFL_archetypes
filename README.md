@@ -53,13 +53,7 @@ The project uses NFL player performance data (either pulled from publicly availa
 The first step is to gather and clean the player data. Ensure that missing values are handled and that all relevant features are extracted from the dataset. This can include statistical summaries like rushing yards per game or passing accuracy.
 
 ```python
-import pandas as pd
 
-# Load your player data (make sure to replace this with your actual file path)
-data = pd.read_csv('player_data.csv')
-
-# Preprocess the data (e.g., handling missing values, normalization)
-data_cleaned = preprocess_data(data)
 ```
 
 
