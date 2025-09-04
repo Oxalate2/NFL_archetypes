@@ -1,10 +1,10 @@
 # NFL_archetypes 🏈
 
-The `NFL_archetypes` project leverages data collection and machine learning techniques to classify NFL players into distinct playstyles or "archetypes." These archetypes are based on various player stats such as passing, rushing, receiving, and defensive metrics.
+This `NFL_archetypes` project leverages data collection and machine learning techniques to classify NFL players into distinct playstyles or "archetypes." These archetypes are based on various player stats such as passing, rushing, receiving, and defensive metrics.
 
 ## Overview
 
-The project gathers comprehensive NFL player data for the 2023 season, processes it, and generates features specific to different position groups, including:
+The project gathers comprehensive NFL player data for any season (default_season=2023), processes it, and generates features specific to different position groups, including:
 
 - **Quarterbacks (QBs)**
 - **Running Backs (RBs)**
