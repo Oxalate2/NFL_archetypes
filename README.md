@@ -1,59 +1,78 @@
 # NFL_archetypes 🏈
 
-## Project Overview
+The `NFL_archetypes` project leverages data collection and machine learning techniques to classify NFL players into distinct playstyles or "archetypes." These archetypes are based on various player stats such as passing, rushing, receiving, and defensive metrics.
 
-The **NFL_archetypes** project aims to leverage **machine learning** techniques and **clustering** algorithms to categorize NFL players into distinct **playstyles** or "archetypes." The goal is to identify and group players based on their on-field behavior and performance metrics, allowing for a deeper understanding of player traits, comparisons, and potentially predicting player performance in future games or seasons.
+## Overview
 
-This project applies unsupervised learning techniques to analyze various performance statistics, metrics, and player characteristics to generate meaningful clusters or archetypes. These archetypes could be used by coaches, analysts, and teams to make data-driven decisions regarding player acquisitions, matchups, and strategic planning.
+The project gathers comprehensive NFL player data for the 2023 season, processes it, and generates features specific to different position groups, including:
 
----
+- **Quarterbacks (QBs)**
+- **Running Backs (RBs)**
+- **Wide Receivers (WRs)**
+- **Pass Catchers (TEs)**
+- **Defensive Players**
 
-## Key Features 🔑
+These features are then used to analyze and cluster players into archetypes based on their playing style.
 
-- **Player Clustering**: Grouping NFL players based on their performance data using unsupervised machine learning techniques (e.g., K-Means, DBSCAN).
-- **Playstyle Archetypes**: Identifying common playstyles such as "Speedster", "Power Runner", "Elite Passer", etc.
-- **Visualization**: Visualizing clusters to make it easier to interpret player archetypes.
-- **Performance Metrics**: Utilizes various player statistics such as rushing yards, passing efficiency, blocking success, speed, and more.
-- **Data-Driven Insights**: Provides insights into player comparisons, and potential strengths/weaknesses for strategy development.
+## Table of Contents
 
----
-
-## Installation
-
-### Requirements
-
-- Python 3.7+
-- Libraries: `numpy`, `pandas`, `matplotlib`, `scikit-learn`, `seaborn`, `statsmodels`
-  
-### Clone the Repository
-
-```bash
-git clone https://github.com/Oxalate2/NFL_archetypes.git
-cd NFL_archetypes
-```
-
-## Data 📊
-
-The project uses NFL player performance data (either pulled from publicly available datasets or APIs). For optimal results, the dataset should include a variety of performance metrics for players, including:
-
-- **Offensive Stats**: Yards gained, touchdowns, completions, rushing attempts, etc.
-- **Defensive Stats**: Tackles, interceptions, sacks, etc.
-- **Advanced Metrics**: Speed, agility scores, yards per carry, passer rating, etc.
-- **Physical Traits**: Height, weight, age, position, etc.
-
-### Data Source
-- [Pro Football Reference](https://www.pro-football-reference.com/)
+- [Data Collection](#data-collection)
+- [Data Processing](#data-processing)
+- [Feature Creation](#feature-creation)
+- [Exploration](#exploration)
+- [Archetypes](#archetypes)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
 ---
 
-## Usage
+## Data Collection
 
-### Step 1: Data Collection and Preprocessing
+Data is collected from [Pro Football Reference](https://www.pro-football-reference.com/), which provides a detailed breakdown of NFL player stats across different seasons.
 
-The first step is to gather and clean the player data. Ensure that missing values are handled and that all relevant features are extracted from the dataset. This can include statistical summaries like rushing yards per game or passing accuracy.
+### Data Collected:
 
-```python
+- **Passing Stats**: Includes quarterback statistics like completions, yards, touchdowns, interceptions, etc.
+- **Rushing Stats**: Includes running back statistics such as carries, yards, touchdowns, and more.
+- **Receiving Stats**: Includes wide receiver and tight end statistics like receptions, yards, and targets.
+- **Defensive Stats**: Includes individual defensive stats like sacks, interceptions, forced fumbles, etc.
 
-```
+The data is fetched using Python’s `requests` and `BeautifulSoup` libraries, allowing you to easily gather and parse the statistics.
 
+---
 
+## Data Processing
+
+The collected data is processed using custom methods to clean and prepare it for analysis. These cleaning methods remove unnecessary rows and handle missing or malformed data, ensuring the resulting dataframes are ready for further analysis.
+
+### Key Functions:
+- **`_clean_passing_data()`**: Cleans quarterback passing statistics.
+- **`_clean_rushing_data()`**: Cleans running back rushing statistics.
+- **`_clean_receiving_data()`**: Cleans wide receiver and tight end receiving stats.
+- **`_clean_defensive_data()`**: Cleans individual defensive player stats.
+
+After cleaning the data, it’s organized into distinct position groups (`QB`, `RB`, `PASS_CATCHER`, `DEFENSE`).
+
+---
+
+## Feature Creation
+
+Features are created specifically for each position group to facilitate archetype classification. The goal is to generate measurable characteristics that capture the player's playing style.
+
+### Example Features:
+- **Quarterbacks**: Passer rating, yards per attempt, deep ball ability, sack rate.
+- **Running Backs**: Yards per carry, rushing touchdown rate, long run ability, fumble rate.
+- **Wide Receivers / Tight Ends**: Catch rate, yards per reception, target share, red zone threat.
+
+These features are calculated using key statistical categories like passing attempts, completions, rushing yards, receptions, etc.
+
+---
+
+## Exploration
+
+Once features are created, the data can be explored using simple queries to identify top performers in each category.
+
+For example, you can query the top 5 quarterbacks by passer rating, top 5 running backs by yards per carry, and top 5 wide receivers by yards per game.
+
+### Example Output:
