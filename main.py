@@ -10,7 +10,6 @@ from features.combined_features import CombinedFeatureCreator
 from utils.exploration import explore_nfl_features
 
 def main():
-  """Main execution function"""
   print("=== NFL PLAYER ARCHETYPE ANALYSIS ===")
   
   # Initialize collector

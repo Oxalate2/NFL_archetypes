@@ -4,7 +4,6 @@ import sys
 class WRFeatureCreator:
   @staticmethod
   def create_features(receiving_df: pd.DataFrame) -> pd.DataFrame:
-    """Create features for WR/TE archetypes"""
     if receiving_df.empty:
       return pd.DataFrame()
     

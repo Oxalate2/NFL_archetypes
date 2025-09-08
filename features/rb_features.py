@@ -4,7 +4,6 @@ import sys
 class RBFeatureCreator:
   @staticmethod
   def create_features(rushing_df: pd.DataFrame) -> pd.DataFrame:
-    """Create features for RB archetypes"""
     if rushing_df.empty:
       return pd.DataFrame()
     

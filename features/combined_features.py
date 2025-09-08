@@ -4,7 +4,6 @@ import sys
 class CombinedFeatureCreator:
   @staticmethod
   def create_combined_offensive_features(qb_df: pd.DataFrame, rb_df: pd.DataFrame, wr_df: pd.DataFrame) -> pd.DataFrame:
-    """Combine all offsensive players into single dataset with normalized features"""
     combined_dfs = []
 
     if not qb_df.empty:

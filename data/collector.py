@@ -6,12 +6,7 @@ from typing import Dict, List, Optional
 from bs4 import BeautifulSoup
 
 class NFLDataCollector:
-  def __init__(self, season: int = 2023):
-    """
-    Initialize NFL data collector
-    Args:
-      season: NFL season year (e.g., 2023)
-    """
+  def __init__(self, season: int = 2024):
     self.season = season
     self.base_url = "https://www.pro-football-reference.com"
     self.session = requests.Session()

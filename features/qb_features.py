@@ -4,7 +4,6 @@ import sys
 class QBFeatureCreator:
   @staticmethod
   def create_features(passing_df: pd.DataFrame) -> pd.DataFrame:
-    """Create QB archetype features"""
     if passing_df.empty:
       return pd.DataFrame()
         
